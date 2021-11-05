@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Ubuntu;
+}
+body {
+    background-color: burlywood;
+}
+
+.form {
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+#email-input, #password-input {
+    border-style: none !important;
+    outline: none !important;
+    border-radius: 10px !important;
+}
+
+button {
+    border-style: none !important;
+    outline: none !important;
+}
+
+ul {
+    padding: 25px !important;
+    list-style: none !important;
+    display: flex !important;
+    /*flex-flow: row wrap !important; */
+    flex-wrap: wrap !important;
+}
+
+li {
+    border-radius: 5px;
+    background-color: chocolate !important;
+    margin-bottom: 20px;
+}

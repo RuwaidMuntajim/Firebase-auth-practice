@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Auth-practise</title>
+</head>
+<body>
+    <div class="container-fluid padding text-center title" >
+      <h1 class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Dreams</h1>
+    </div>
+    
+    <!--Signup and Login form-->
+    <div class="container-fluid padding text-center form" style="display: none;">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 signup-form">
+        <form id="signup">
+          <input type="text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="email-input" placeholder="Email" required>
+          <input type="password" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="password-input" placeholder="Password" required>
+          <button>Sign Up</button>
+        </form>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 login-form">
+        <form id="login">
+          <input type="text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="email-input" placeholder="Email" required>
+          <input type="password" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="password-input" placeholder="Password" required>
+          <button>Log In</button>
+        </form>
+      </div>
+    </div>
+    <div class="container-fluid text-center padding dream-form" style="display: none;">
+      <form class="col-xs-12 col-sm-12 col-md-12 col-lg-12 dreamForm">
+        <input type="text" name="title" placeholder="express your dreams :)" required>
+        <input type="text" name="content" placeholder="express your dreams :)" required>
+        <button class="dream-btn">Add</button>
+      </form>
+    </div>
+    <div class="container-fluid padding text-center dream-list">
+      <ul class="col-xs-12 col-sm-12 col-md-12 col-lg-12 dreamList">
+      </ul>
+    </div>
+    <!--Signup/Login End -->
+    <div class="container-fluid padding text-center logoutbtn" style="display: none">
+      <button class="logout-btn">logout</button>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-auth.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCdv7Qs9sVvDS0n4sG4T9CwJw2LwavrP8Q",
+    authDomain: "auth-practice-aba2e.firebaseapp.com",
+    projectId: "auth-practice-aba2e",
+    storageBucket: "auth-practice-aba2e.appspot.com",
+    messagingSenderId: "96967924903",
+    appId: "1:96967924903:web:52800885e5aafdb5ca4f82"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+  const auth = firebase.auth();
+</script>
+<script src="scripts/auth.js"></script>
+<script src="scripts/index.js"></script>
+</html>
+<!-- Copyright reserved :) -->
